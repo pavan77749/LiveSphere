@@ -1,0 +1,65 @@
+# Dependency directories
+node_modules/
+
+# Build output
+/build
+
+# Local development env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Test coverage
+coverage/
+
+# Misc
+*.tgz
+*.zip
+*.bak
+*.swp
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDEs and editors
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Optional eslint and stylelint cache
+.eslintcache
+.stylelintcache
+
+# Binaries
+*.exe
+*.dll
+*.so
+*.dylib
+*.pyc
+*.pyo
+
+# Mac system files
+.AppleDouble
+.LSOverride
+
+# npm
+.npm
+
+# Parcel cache
+.cache/
+
+# Next.js build output (if using Next)
+.next/
+out/
