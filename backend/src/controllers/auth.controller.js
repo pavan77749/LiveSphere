@@ -32,12 +32,12 @@ export async function signup (req, res) {
         const idx = Math.floor(Math.random() * 100)+1;
         const randomAvatar = `https://avatar.iran.liara.run/public/${idx}.png`;
 
-        const newUser = await User({
+        const newUser = await User.create({
             fullName,
             email,
             password: await bcrypt.hash(password, 10),
             profilePicture: randomAvatar,
-        }).save();
+        });
         
         // Todo : create the user in steam as well
         try {
