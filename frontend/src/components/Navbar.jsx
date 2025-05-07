@@ -48,7 +48,7 @@ const Navbar = () => {
             </div>
 
             {/* ToDo */}
-           <ThemeSelector/>
+           <ThemeSelector className="gap-3"/>
 
         <div className="avatar">
             <div className="w-9 rounded-full ">
