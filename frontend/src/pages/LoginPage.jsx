@@ -1,9 +1,10 @@
 import React from 'react'
-import { useMutation } from '@tanstack/react-query'
-import { login } from '../lib/api.js'
-import { useQueryClient } from '@tanstack/react-query'
+// import { useMutation } from '@tanstack/react-query'
+// import { login } from '../lib/api.js'
+// import { useQueryClient } from '@tanstack/react-query'
 import { OrbitIcon } from 'lucide-react'
 import { Link } from 'react-router'
+import useLogin from '../hooks/useLogin.js'
 
 const LoginPage = () => {
   const [loginData, setLoginData] = React.useState({
@@ -11,11 +12,13 @@ const LoginPage = () => {
     password: "",
   });
 
-  const queryClient = useQueryClient()
-  const {mutate:loginMutation ,isPending,error}  = useMutation({
-    mutationFn: login,
-    onSuccess: () => queryClient.invalidateQueries({queryKey: ['authUser']}),
-  })
+  // const queryClient = useQueryClient()
+  // const {mutate:loginMutation ,isPending,error}  = useMutation({
+  //   mutationFn: login,
+  //   onSuccess: () => queryClient.invalidateQueries({queryKey: ['authUser']}),
+  // })
+
+  const {isPending,error,loginMutation} = useLogin()
 
   const handleLogin = (e) => {
     e.preventDefault();
