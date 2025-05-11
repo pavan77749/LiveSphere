@@ -42,7 +42,7 @@ const Navbar = () => {
             </div>)}
 
             <div className="flex items-center gap-3 sm:gap-4">
-            <Link to="/notification" className={`btn btn-ghost justify-start w-full gap-3 px-3 normal-case ${currentPath === '/notification' ? 'bg-base-200 text-primary' : 'text-base-content hover:bg-base-200'}`}>
+            <Link to="/notifications" className={`btn btn-ghost justify-start w-full gap-3 px-3 normal-case ${currentPath === '/notification' ? 'bg-base-200 text-primary' : 'text-base-content hover:bg-base-200'}`}>
         <BellIcon className="size-5 text-base-content opacity-70" />    
         </Link>
             </div>

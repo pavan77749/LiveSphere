@@ -1,7 +1,8 @@
 import React from 'react'
 import {LANGUAGE_TO_FLAG} from "../constants/index.js"
+import { Link } from 'react-router';
 
-const FriendCard = (friend) => {
+const FriendCard = ({friend}) => {
   return (
     <div className='card bg-base-200 hover:shadow-md transition-shadow'>
         <div className="card-body p-4">
@@ -25,7 +26,7 @@ const FriendCard = (friend) => {
                 </span>
                  </div>
 
-                <Link className='btn btn-primary btn-sm' to={`/chat/${friend._id}`}>
+                <Link className='btn btn-primary btn-sm' to={`/chat/${friend.id}`}>
                 Message
                 </Link>
 
