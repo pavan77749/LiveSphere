@@ -52,7 +52,7 @@ export async function sendFriendRequest(req, res) {
         }
         
         //check if user is already in the friend requests list of the recipient
-        const existingRequest = await FriendRequest({
+        const existingRequest = await FriendRequest.findOne({
             $or:[
                 { sender: myId, recipient: recipientId },
                 { sender: recipientId, recipient: myId }
